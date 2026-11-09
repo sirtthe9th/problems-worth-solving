@@ -1,0 +1,98 @@
+name: Submit a problem
+description: Describe a problem that needs solving. You don't need a solution, and you don't need to know git.
+title: "[Problem]: "
+labels: ["status: proposed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. **Describe the problem, not a solution**, so that different approaches can compete.
+        Two rules: **cite a source or write "[to confirm]"**, and **describe groups of people, never a named private person.**
+        Anything you don't know, write "don't know". A maintainer will help fill the gaps.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One sentence. Who is affected, and what goes wrong for them?
+      placeholder: Housebound seniors in small towns can't get groceries delivered because no service covers their area.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: What kind of solution might it need?
+      options:
+        - Don't know
+        - Social (volunteering, a program, a change in process)
+        - Technical (a web or mobile app, a tool)
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who is affected
+      description: The group of people who live with this problem. Roughly how many, and where?
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem, as observed
+      description: What happens today, from the point of view of the people affected? Where does it break down?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: How we know
+      description: Links, data, news, research, or first-hand experience (describe whose by role, e.g. "as a home care nurse").
+  - type: textarea
+    id: existing
+    attributes:
+      label: What exists today
+      description: Services, apps or workarounds that already try to solve this, and why they fall short. Please search first.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Scale and impact
+      description: What does it cost the people affected (time, money, health, safety, dignity)? How often?
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: Anything a solution must respect, such as cost, privacy, accessibility, language, legal rules, geography, or the technology people have.
+  - type: textarea
+    id: success
+    attributes:
+      label: What success looks like
+      description: How would we know it's solved? Measurable if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements (optional)
+      description: What must, should, or could a solution do? One per line.
+      placeholder: |
+        Must: ...
+        Should: ...
+        Could: ...
+  - type: textarea
+    id: misuse
+    attributes:
+      label: How could a solution be misused or cause harm?
+      description: Who might exploit it, and how? Scams, data harvesting, access to vulnerable people, harassment. "I can't think of anything" is an acceptable answer.
+    validations:
+      required: true
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched existing issues and problems/ and this isn't already there.
+          required: true
+        - label: This doesn't name or identify any private individual.
+          required: true
+        - label: I agree to the Code of Conduct, and that this submission is licensed under CC BY 4.0.
+          required: true

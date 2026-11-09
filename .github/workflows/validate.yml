@@ -1,0 +1,31 @@
+# Runs on every pull request and every push to main. Read-only: it never writes to the
+# repository, and it uses pull_request (not pull_request_target) so fork code never gets secrets.
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Frontmatter and indexes
+        run: npm run check
+      - name: Markdown style
+        run: npm run lint
+      - name: Links inside the repository
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --no-progress --include-fragments --exclude-path node_modules --exclude-path templates './**/*.md'
+          fail: true

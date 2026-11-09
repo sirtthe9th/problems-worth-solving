@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: An idea that isn't ready yet
+    url: https://github.com/sirtthe9th/problems-worth-solving/discussions
+    about: Not sure it's a real problem, or still working it out? Start a discussion instead.
+  - name: Report abuse, a scam, or a safety concern
+    url: https://github.com/sirtthe9th/problems-worth-solving/blob/main/SAFETY.md#how-to-report
+    about: Don't post it publicly. Follow the reporting steps in SAFETY.md.

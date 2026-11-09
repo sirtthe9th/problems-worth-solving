@@ -1,0 +1,18 @@
+{
+  "name": "problems-worth-solving",
+  "private": true,
+  "description": "Tooling for the problems-worth-solving hub: index generation and validation.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "index": "node scripts/build-index.mjs",
+    "check": "node scripts/build-index.mjs --check",
+    "lint": "npx --yes markdownlint-cli2@0.24.0 \"**/*.md\""
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "yaml": "2.9.1"
+  }
+}

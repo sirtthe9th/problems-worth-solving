@@ -1,0 +1,62 @@
+name: Claim a problem
+description: Say you want to build a solution to an accepted problem.
+title: "[Claim]: "
+labels: ["status: claimed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Claims don't lock a problem: others can try a different approach. Post an update at least every 60 days or the claim lapses (see GOVERNANCE.md).
+  - type: input
+    id: problem
+    attributes:
+      label: Which problem?
+      description: The problem's id and title, or a link to its file in problems/.
+      placeholder: "0003: Getting groceries to housebound seniors"
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Your approach
+      description: In a few sentences, what would you build or organize?
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of solution
+      options:
+        - Volunteer program
+        - Web app
+        - Mobile app
+        - Process change
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: have
+    attributes:
+      label: What you bring
+      description: Skills, people, time, or partner organizations you already have.
+  - type: textarea
+    id: need
+    attributes:
+      label: What you need
+      description: Skills, people or resources you're looking for. This becomes the "How to help" section.
+  - type: input
+    id: first-milestone
+    attributes:
+      label: First milestone and rough date
+      placeholder: "A filled-in SOLUTION.md by March"
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: Before you submit
+      options:
+        - label: I've read SAFETY.md, and I understand the hub never handles money.
+          required: true
+        - label: I'll keep coordination in public issues and discussions in this repository.
+          required: true
+        - label: I'll post an update at least every 60 days, or say if I'm stepping back.
+          required: true

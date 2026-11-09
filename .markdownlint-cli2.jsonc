@@ -1,0 +1,15 @@
+{
+  // Style checks for every .md file. Long lines, inline HTML (purpose comments) and a
+  // non-heading first line (the purpose comment) are allowed on purpose.
+  "config": {
+    "default": true,
+    "MD013": false,
+    "MD033": false,
+    "MD041": false,
+    "MD024": { "siblings_only": true },
+    "MD036": false,
+    "MD060": false,
+    "MD025": { "front_matter_title": "" }
+  },
+  "ignores": ["node_modules/**", "CODE_OF_CONDUCT.md"]
+}
