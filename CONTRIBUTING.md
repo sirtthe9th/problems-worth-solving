@@ -23,7 +23,7 @@ Before you start, read the [Code of Conduct](CODE_OF_CONDUCT.md) and [SAFETY.md]
    from the issue. You'll be credited in the doc.
 
 Not sure it's a real problem yet? [Start a discussion](https://github.com/sirtthe9th/problems-worth-solving/discussions)
-in **Ideas not ready yet** instead.
+in the **Ideas** category instead.
 
 ## 2. Improve a problem
 
